@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+
+        div {
+            padding: 10px;
+            border: 1px solid black;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        div:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Iniciando os estudos em DOM</h1>
+    <p class="paragrafo">Aqui vai o resultado</p>
+    <p class="paragrafo">Aprendendo a usar <strong>DOM</strong> em JavaScript
+    </p>
+    <div onclick="mudar_fundo()" id="botao">Clique em mim!</div>
+    
+    <script>
+        const p1 = document.getElementsByTagName('p')[0]
+        const p2 = document.getElementsByTagName('p')[1]
+        const corpo = document.body
+        const botao = document.getElementById('botao')
+        const paragrafo = document.getElementsByClassName('paragrafo')
+        const titulo = document.querySelector('h1#titulo')
+        // document.write(`O primeiro parágrafo está escrito assim: ${p1.innerText}`)
+        p1.style.color = 'red'
+        // p2.innerText = 'Sou o segundo parágrafo'
+
+        function mudar_fundo() {
+            if (corpo.style.backgroundColor == 'lightgray') {
+                corpo.style.backgroundColor = 'black'
+                corpo.style.color = 'white'
+                botao.style.borderColor = 'white'
+                botao.innerText = 'Clique de novo'
+                titulo.style.fontFamily = 'times new roman'
+            }
+            else {
+                corpo.style.backgroundColor = 'lightgray'
+                corpo.style.color = 'black'
+                botao.style.borderColor = 'black'
+            }
+        }
+    </script>
+</body>
+</html>
