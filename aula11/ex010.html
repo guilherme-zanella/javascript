@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições simples</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        input#velocidade {
+            width: 50px;
+        }
+
+        div#resultado.multa strong{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <form action="">
+        <p>
+            <label for="velocidade">Velocidade do carro: </label>
+            <input type="number" name="velocidade" id="velocidade" required min="1">
+            <label for="velocidade">Km/h</label>
+            <input type="button" value="Verificar" onclick="calcular()">
+        </p>
+        <div id="resultado"></div>
+    </form> 
+    <script>
+        const resultado = document.getElementById('resultado')
+        
+        function calcular() {
+            const velocidade = Number(document.getElementById('velocidade').value)
+            resultado.innerHTML = `<p>Sua velocidade é de <strong>${velocidade}km/h</strong></p>`
+            if (velocidade > 60) {
+                resultado.innerHTML += '<p>Você está <strong>MULTADO</strong> por excesso de velocidade</p>'
+                resultado.classList.toggle('multa')
+            }
+            resultado.innerHTML += '<p>Dirija sempre com cinto de segurança</p>'
+        }
+    </script>
+</body>
+</html>

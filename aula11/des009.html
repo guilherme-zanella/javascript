@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de recriação do ex009</title>
+    <style>
+        body.brasil {
+            background: linear-gradient(90deg,  yellow, green);
+        }
+    </style>
+</head>
+<body>
+    <h1>Da onde você é?</h1>
+    <form action="">
+        <p>
+            <label for="pais">Digite o seu país</label>
+            <input type="text" name="pais" id="pais">
+            <input type="button" value="Enviar" onclick="nacionalidade()">
+        </p>
+        <p id="resultado"></p>
+    </form>
+    <script>
+        function nacionalidade() {
+            const pais = document.getElementById('pais').value
+            const resultado = document.getElementById('resultado')
+
+            resultado.innerHTML = `<p>Vivendo em <strong>${pais}</strong></p>`
+            if (pais.toLowerCase() == 'brasil') {
+                resultado.innerHTML += '<p>Você é <strong>brasileiro</strong></p>'
+                document.body.classList.toggle('brasil')
+            }
+            else {
+                resultado.innerHTML += '<p>Você é <strong>estrangiro</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
