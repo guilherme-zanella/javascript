@@ -1,3 +1,5 @@
+const input_nasc = document.getElementById('nascimento')
+input_nasc.max = Number(new Date().getFullYear())
 
 function verficar() {
     const nascimento = Number(document.getElementById('nascimento').value)
