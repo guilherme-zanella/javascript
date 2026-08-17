@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <main>
+        <div id="form">
+            <form action="">
+                <p>
+                    <label for="nascimento">Ano de nascimento</label>
+                    <input type="number" name="nascimento" id="nascimento" required value="2000">
+                </p>
+                <p>
+                    Sexo:
+                    <input type="radio" name="sexo" id="sexo_M" required checked value="homem">
+                    <label for="sexo_M">Masculino</label>
+                    <input type="radio" name="sexo" id="sexo_F" required value="mulher">
+                    <label for="sexo_F">Feminino</label>
+                </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="verficar()">
+                </p>
+            </form>
+        </div>
+        <div id="resultado">
+            Preencha os dados acima para ver o resultado!
+        </div>
+        <div id="foto">
+            <img src="../imagens/bebe.jpg" alt="Imagem de uma pessoa com sua idade" id="imagem">
+        </div>
+    </main>
+    <footer>
+        <p><a href="https://github.com/guilherme-zanella" target="_blank">Guilherme Zanella</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
