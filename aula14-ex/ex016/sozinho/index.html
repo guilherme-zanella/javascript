@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <main>
+        <div id="form">
+            <form action="">
+                <p>
+                    <label for="inicio">Início:</label>
+                    <input type="number" name="inicio" id="inicio">
+                </p>
+                <p>
+                    <label for="final">Final:</label>
+                    <input type="number" name="final" id="final">
+                </p>
+                <p>
+                    <label for="passo">Passo:</label>
+                    <input type="number" name="passo" id="passo">
+                </p>
+                <p>
+                    <input type="button" value="Contar" onclick="contador()">
+                </p>
+            </form>
+        </div>
+        <div id="texto">Preparando a contagem...</div>
+        <div id="resultado">
+
+        </div>
+    </main>
+    <footer>
+        <p><a href="https://github.com/guilherme-zanella" target="_blank">Guilherme Zanella</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
