@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <main>
-        <div>
-            Testando...
+        <div id="form">
+           <p>
+                <label for="numero">Número:</label>
+                <input type="number" name="numero" id="numero">
+                <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+           </p>
         </div>
         <div>
-
+            <select name="tabuada" id="tabuada" size="11">
+                
+            </select>
         </div>
     </main>
     <footer>
