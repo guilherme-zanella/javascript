@@ -12,9 +12,19 @@
     </header>
     <main>
         <div>
-            Testando...
+            <p>
+                <label for="numero">Número (entre 1 e 100):</label>
+                <input type="number" name="numero" id="numero">
+                <input type="button" value="Adicionar" onclick="adicionar()">
+            </p>
+            <p>
+                <select name="flista" id="flista" size="5"></select>
+            </p>
+            <p>
+                <input type="button" value="Finalizar" onclick="finalizar()">
+            </p>
         </div>
-        <div>
+        <div id="resultado">
 
         </div>
     </main>

@@ -20,6 +20,10 @@ main {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.39);
 }
 
+select#flista {
+    width: 150px;
+}
+
 footer {
     text-align: center;
 }

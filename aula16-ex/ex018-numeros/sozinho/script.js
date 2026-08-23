@@ -59,7 +59,7 @@ function finalizar() {
 
         res_txt.innerHTML += `<p>Ao todo, temos ${list_n.length} números cadastrados.</p>`
         res_txt.innerHTML += `<p>O maior número adicionado foi ${maior}</p>`
-        res_txt.innerHTML += `<p>O menor número acicionado foi ${menor}</p>`
+        res_txt.innerHTML += `<p>O menor número adicionado foi ${menor}</p>`
         res_txt.innerHTML += `<p>A soma de todos os números é ${soma}</p>`
         res_txt.innerHTML += `<p>A média dos números é ${media}</p>`
     }
