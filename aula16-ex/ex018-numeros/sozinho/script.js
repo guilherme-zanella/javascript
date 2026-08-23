@@ -16,6 +16,7 @@ function adicionar() {
         }
         else {
             res_list.style.display = 'block'
+            res_txt.innerHTML = ''
             
             if (!list_n.includes(n)) {
                 let item = document.createElement('option')
