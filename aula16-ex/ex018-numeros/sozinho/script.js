@@ -2,6 +2,8 @@ let res_txt = document.getElementById('resultado')
 let res_list = document.getElementById('num_list')
 let list_n = []
 
+res_list.style.display = 'none'
+
 function adicionar() {
     let n_txt = document.getElementById('numero').value
     let n = Number(n_txt)
@@ -13,6 +15,8 @@ function adicionar() {
             alert('Número inválido! Digite um número entre 1 e 100.')
         }
         else {
+            res_list.style.display = 'block'
+            
             if (!list_n.includes(n)) {
                 let item = document.createElement('option')
                 item.text = `${n} adicionado`
