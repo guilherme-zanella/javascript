@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f96e3099c2.js" crossorigin="anonymous"></script>
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,7 +11,7 @@
     <main>
         <div id="calculo">
             <div id="conta"></div>
-            <input type="button" value="apagar" onclick="apagar()">
+            <button onclick="apagar()"><i class="fa-solid fa-delete-left"></i></button>
         </div>
 
         <input type="button" value="7" class="numero">
@@ -28,7 +29,7 @@
         <input type="button" value="3" class="numero">
         <input type="button" value="-" class="operacao">
 
-        <input type="button" value="=" id="igual" onclick="igual()">
+        <input type="button" value="=" id="igual" onclick="igual()" >
         <input type="button" value="0" class="numero">
         <input type="button" value=",">
         <input type="button" value="+" class="operacao">

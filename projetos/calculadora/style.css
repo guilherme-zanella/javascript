@@ -2,7 +2,7 @@
     --fundo: #1a1919;
     --calculadora: rgb(8, 8, 8);
     --texto: white;
-    --destaque: rgb(14, 44, 14);
+    --destaque: rgb(22, 70, 24);
 }
 
 * {
@@ -23,8 +23,8 @@ body {
 
 main {
     display:  grid;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: 100px 50px 50px 50px 50px;
+    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-rows: 120px 60px 60px 60px 60px;
     background-color: var(--calculadora);
     gap: 5px;
     padding: 10px;
@@ -39,8 +39,8 @@ div#calculo {
     align-items: center;
 }
 
-div#calculo div,input {
-    height: 50px;
+div#calculo div,button {
+    height: 60px;
 }
 
 div#calculo div {
@@ -51,7 +51,12 @@ div#calculo div {
     align-items: center;
 }
 
-input {
+div#calculo button {
+    padding: 10px;
+    background-color: var(--calculadora);
+}
+
+input, button {
     cursor: pointer;
     background-color: var(--fundo);
     border: none;
