@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="calculo">
+            <div id="conta"></div>
+            <input type="button" value="apagar" onclick="apagar()">
+        </div>
+
+        <input type="button" value="7" class="numero">
+        <input type="button" value="8" class="numero">
+        <input type="button" value="9" class="numero">
+        <input type="button" value="/" class="operacao">
+
+        <input type="button" value="4" class="numero">
+        <input type="button" value="5" class="numero">
+        <input type="button" value="6" class="numero">
+        <input type="button" value="*" class="operacao">
+
+        <input type="button" value="1" class="numero">
+        <input type="button" value="2" class="numero">
+        <input type="button" value="3" class="numero">
+        <input type="button" value="-" class="operacao">
+
+        <input type="button" value="=" id="igual" onclick="igual()">
+        <input type="button" value="0" class="numero">
+        <input type="button" value=",">
+        <input type="button" value="+" class="operacao">
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
