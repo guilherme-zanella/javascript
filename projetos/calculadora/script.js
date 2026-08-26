@@ -75,4 +75,15 @@ function apagar() {
     }
 }
 
+function tema() {
+    const corpo = document.body
+    const botao = document.getElementById('tema')
 
+    corpo.classList.toggle('claro')
+    if (corpo.className == 'claro') {
+        botao.innerHTML = '<i class="fa-solid fa-moon"></i>'
+    }
+    else {
+        botao.innerHTML = '<i class="fa-solid fa-sun"></i>'
+    }
+}

@@ -21,10 +21,17 @@ body {
     align-items: center;
 }
 
+body.claro {
+    --fundo: rgb(197, 197, 197);
+    --calculadora: rgb(224, 224, 224);
+    --texto: black;
+    --destaque: rgb(255, 71, 71);
+}
+
 main {
     display:  grid;
     grid-template-columns: 60px 60px 60px 60px;
-    grid-template-rows: 120px 60px 60px 60px 60px;
+    grid-template-rows: 30px 120px 60px 60px 60px 60px;
     background-color: var(--calculadora);
     gap: 5px;
     padding: 10px;
@@ -32,8 +39,29 @@ main {
     border: 3px solid var(--destaque);
 }
 
+div#menu {
+    grid-area: 1/1/2/-1;
+    border-bottom: 1px solid var(--fundo);
+}
+
+div#menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    color: var(--fundo);
+}
+
+div#menu li {
+    cursor: pointer;
+}
+
+div#menu li:hover {
+    color: var(--destaque);
+}
+
 div#calculo {
-    grid-area: 1 / 1 / 2 / -1;
+    grid-area: 2 / 1 / 3 / -1;
     display: flex;
     justify-content: space-between;
     align-items: center;
