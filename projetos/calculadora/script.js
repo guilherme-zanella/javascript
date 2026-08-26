@@ -37,6 +37,10 @@ function igual() {
         n1 = Number(n1)
         n2 = Number(n2)
         if (operacao_clicada == '/') {
+            if (n2 == 0) {
+                alert('Não é possível fazer divisões por zero!')
+                n2 = 1
+            }
             res_conta = n1 / n2
         }
         else if (operacao_clicada == '*') {
@@ -50,18 +54,25 @@ function igual() {
         }
 
         resultado.innerHTML = res_conta
-        n1 = res_conta
+        n1 = String(res_conta)
         n2 = ''
         operacao_clicada = ''
     }
 }
 
 function apagar() {
-    operacao_clicada = ''
-    numero_clicado = 0
-    n1 = ''
-    n2 = ''
-    resultado.innerHTML = ''
+    if (n2 != '') {
+        n2 = n2.slice(0, -1)
+        resultado.innerHTML = resultado.innerHTML.slice(0, -1)
+    }
+    else if (operacao_clicada != '') {
+        operacao_clicada = ''
+        resultado.innerHTML = resultado.innerHTML.slice(0, -3)
+    }
+    else {
+        n1 = String(n1).slice(0, -1)
+        resultado.innerHTML = resultado.innerHTML.slice(0, -1)
+    }
 }
 
 
