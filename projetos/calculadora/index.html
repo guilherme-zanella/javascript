@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main id="calculadora">
+        <div id="historico" class="normal">
+            <p>Sem histórico!</p>
+        </div>
         <div id="menu">
             <ul>
-                <li onclick="historico()"><i class="fa-solid fa-clock-rotate-left"></i></li>
+                <li onclick="historico()" id="botao_his"><i class="fa-solid fa-clock-rotate-left"></i></li>
                 <li onclick="tema()" id="tema"><i class="fa-solid fa-sun"></i></li>
             </ul>
         </div>
 
-        <div id="calculo">
+        <div id="calculo" class="normal">
             <div id="conta"></div>
             <button onclick="apagar()"><i class="fa-solid fa-delete-left"></i></button>
         </div>
