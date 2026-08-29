@@ -75,6 +75,10 @@ function igual() {
         n1 = String(res_conta)
         n2 = ''
         operacao_clicada = ''
+        if (his.length == 5) {
+            his.shift()
+            his_tela.shift()
+        }
     }
 }
 
@@ -126,9 +130,5 @@ function historico() {
         for (let i = 0; i < his.length; i++) {
             his_tela.innerHTML += ` ${his[i]}; <br>`
         }
-    }
-    if (his.length == 5) {
-        his.shift()
-        his_tela = ''
     }
 }
