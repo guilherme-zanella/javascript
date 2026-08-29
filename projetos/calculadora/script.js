@@ -9,11 +9,15 @@ let his = []
 let his_tela = document.getElementById('historico')
 let cal_tela = document.getElementById('calculo')
 let cliques = 0
+let segunda_operacao = ''
 
 operacaos.forEach(botao => {
     botao.addEventListener('click', function(evento) { 
         if (cliques == 0) {
             operacao_clicada = evento.target.value
+        }
+        if (cliques == 1) {
+            segunda_operacao = evento.target.value
         }
 
         const botao = document.getElementById('botao_his')
@@ -84,12 +88,23 @@ function igual(oper='') {
             res_conta = n1 + n2
         }
 
+        if (segunda_operacao != '') {
+            oper = segunda_operacao
+        }
+
         his.push(`${n1} ${operacao_clicada} ${n2} = ${res_conta}`)
-        resultado.innerHTML = `${res_conta}${oper}`
+        if (oper == '') {
+            resultado.innerHTML = res_conta
+            cliques = 0
+        }
+        else {
+            resultado.innerHTML = `${res_conta} ${oper} `
+            cliques = 1
+        }
         n1 = String(res_conta)
         n2 = ''
         operacao_clicada = oper
-        cliques = 0
+        segunda_operacao = ''
         if (his.length == 5) {
             his.shift()
             his_tela.shift()
@@ -105,7 +120,7 @@ function apagar() {
     else if (operacao_clicada != '') {
         operacao_clicada = ''
         resultado.innerHTML = resultado.innerHTML.slice(0, -3)
-        cliques -= 1
+        cliques = 0
     }
     else {
         n1 = String(n1).slice(0, -1)
